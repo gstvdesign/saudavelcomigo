@@ -68,6 +68,11 @@ a:hover {
 header {
   padding-top: 1rem;
   background-color: var(--laranja);
+  transition: all .3s ease-in-out;
+}
+
+nav {
+  transition: all .3s ease-in-out;
 }
 .menu {
   justify-content: flex-end;
@@ -90,6 +95,25 @@ header {
   border-bottom: solid 10px;
 }
 
+.sub-menu {
+  display: none;
+}
+
+li.menu-item:hover ul.sub-menu {
+  display: inline;
+}
+
+ul.sub-menu {
+  
+  padding-left: 0;
+}
+
+ul.sub-menu > li {
+  padding-left: 0;
+  padding: 1rem 0;
+  background-color: var(--vermelho);
+}
+
 /* Post */
 .post {
   max-width: 40rem;
@@ -102,7 +126,7 @@ header {
   margin: 1rem 0;
 }
 
-.post_metadesc, .post_date {
+.post_metadesc {
   font-size: .75rem;
   color: var(--discreto);
   margin: 0;
@@ -169,10 +193,31 @@ header {
   border-bottom: 0;
 }
 
+.posts_nav {
+  margin-bottom: 6rem;
+}
+
+.posts_nav_right a, .posts_nav_left a {
+  border: 1px solid var(--laranja);
+  padding: 1rem;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.posts_nav_right {
+  text-align: right;
+} 
+
+.posts_nav_left {
+  text-align: left;
+}
+
 /* Sidebar */
 
 .sidebar {
   margin-top: 2rem;
+  max-width: 15rem;
 }
 
 .search {

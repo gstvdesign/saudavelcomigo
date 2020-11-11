@@ -6,6 +6,6 @@
     Site feito por Strategizze <i class="fas fa-rocket"></i>
   </p>
 </div>
-
+<?php wp_footer() ?>
 </body>
 </html>

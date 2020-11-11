@@ -1,6 +1,7 @@
 <div id="primary" class="sidebar">
     <?php do_action( 'before_sidebar' ); ?>
-    <?php if ( ! dynamic_sidebar( 'sidebar-primary' ) ) : ?>
+    <?php if ( is_active_sidebar( 'primary' ) ) : ?>
+    <?php dynamic_sidebar( 'primary' ); ?>
         <aside id="search" class="widget widget_search">
            <?php get_search_form(); ?>
         </aside>
@@ -11,4 +12,6 @@
             </ul>
         </aside>
    <?php endif; ?>
+
+   
 </div>

@@ -8,6 +8,15 @@
         endwhile;
     endif;
     ?>
+
+    <div class="posts_nav">
+      <div class="posts_nav_right">
+        <?php next_posts_link('Próxima página') ?>
+      </div>
+      <div class="posts_nav_left">
+        <?php previous_posts_link('Página anterior') ?>
+      </div>
+    </div>
   </div>
 
   <div class="sidebar">
