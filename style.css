@@ -1,0 +1,208 @@
+/*
+Theme Name: Strategizze
+Author: Gustavo Nering
+Author URI: https://gstvdesign.netlify.app/
+Description: Tema base em branco para customizar sites simples em wordpress
+Version: 1.0
+Tags: blank, white, empty
+*/
+
+:root {
+  --font:  objektiv-mk1, sans-serif; 
+  --vermelho: #f25c68;
+  --verde: #00a874;
+  --laranja: #f28749;
+  --amarelo: #f3ab2a;
+  --gelo: #c9ecdf;
+  --claro: #ffefce;
+  --discreto: #7db1a0;
+  --bold: 700;
+  --xbold: 800;
+}
+
+html {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--gelo);
+  color: var(--verde);
+  font-family: var(--font);
+  font-size: 16px;
+  margin: 0;
+  padding: 0;
+}
+
+form, input {
+  font-family: var(--font);
+  font-size: 1rem;
+}
+
+.menu, .main {
+  display: flex;
+}
+
+.main {
+  margin: 0 auto;
+  width: max-content;
+}
+
+a {
+  color: var(--laranja);
+  text-decoration: none;
+  transition: all .3s ease-in-out;
+}
+
+a:hover {
+  color: var(--vermelho);
+  border-bottom: 10px solid;
+}
+
+/* Header */
+.banner {
+  background-image: url(./assets/img/header-bg.png);
+  display: flex;
+  justify-content: center;
+}
+header {
+  padding-top: 1rem;
+  background-color: var(--laranja);
+}
+.menu {
+  justify-content: flex-end;
+  margin-right: 1rem;
+}
+.menu li {
+  list-style: none;
+  padding-left: 1rem;
+}
+
+.menu li a {
+  text-transform: uppercase;
+  color: var(--claro);
+  text-decoration: none;
+  transition: all .3s ease-in-out;
+}
+
+.menu li a:hover {
+  color: var(--gelo);
+  border-bottom: solid 10px;
+}
+
+/* Post */
+.post {
+  max-width: 40rem;
+  margin-right: 2rem;
+}
+
+.post_title {
+  font-size: 2rem;
+  font-weight: var(--xbold);
+  margin: 1rem 0;
+}
+
+.post_metadesc, .post_date {
+  font-size: .75rem;
+  color: var(--discreto);
+  margin: 0;
+}
+
+.post_meta {
+  display: flex;
+}
+.post_date, .post_comments{
+  margin-top: 2rem;
+  margin-right: 1rem;
+}
+
+.post_author, .post_comment-cta{
+  margin-bottom: 1rem;
+  color: var(--laranja);
+  font-weight: var(--bold);
+}
+
+.post-categories, .post-categories > li {
+  margin: 0;
+  list-style-type: none;
+  padding: 0;
+}
+
+.post_img img {
+  max-width: 40rem;
+  height: auto;
+}
+
+.post-categories {
+  margin-bottom: 1rem;
+}
+.post-categories > li > a {
+  margin-right: 2rem;
+  padding: 0.5rem;
+  border-radius: 1rem;
+  color: var(--laranja);
+  font-size: 0.5rem;
+  text-transform: uppercase;
+  border: 1px solid;
+}
+
+.post-categories a:hover {
+  border-bottom: 1px solid;
+}
+
+.post_share {
+  display: flex;
+  margin-bottom: 6rem;
+}
+
+.fab {
+  font-size: 1.5rem;
+  margin-right: 1rem;
+}
+
+.post_share a {
+  color: var(--verde);
+}
+
+.post_share a:hover {
+  color: var(--vermelho);
+  border-bottom: 0;
+}
+
+/* Sidebar */
+
+.sidebar {
+  margin-top: 2rem;
+}
+
+.search {
+  display: flex;
+  flex-direction: column;
+  font-size: 1rem;
+}
+
+.search_title, .search_input, .search_button {
+  margin-bottom: 1rem;
+}
+
+.search_input {
+  padding: 1rem;
+  border: solid 2px var(--verde);
+  border-radius: 1rem;
+  color: var(--verde);
+}
+
+.search_button {
+  padding: 1rem;
+  border-radius: 1rem;
+  border: 0;
+  background-color: var(--verde);
+  color: var(--gelo);
+}
+
+.footer {
+  background-color: var(--laranja);
+  color: var(--gelo);
+  padding: 1rem;
+  text-align: center;
+}
