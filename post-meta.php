@@ -1,7 +1,7 @@
 <div class="post_meta">
   <div class="post_date">
     <p class="post_metadesc">Escrito por</p>
-    <p class="post_author"><a href="<?php the_author_link(); ?>"><?php the_author(); ?></a></p>
+    <p class="post_author"><a href="<?php echo esc_url(get_author_posts_url( get_the_author_meta( 'ID' ) ) ); ?>"><?php the_author(); ?></a></p>
   </div>
   <div class="post_comments">
     <p class="post_metadesc">

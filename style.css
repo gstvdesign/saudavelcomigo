@@ -1,9 +1,9 @@
 /*
-Theme Name: Strategizze
+Theme Name: Strategizze — Saudável Comigo
 Author: Gustavo Nering
 Author URI: https://gstvdesign.netlify.app/
-Description: Tema base em branco para customizar sites simples em wordpress
-Version: 1.0
+Description: Tema para Saudavel Comigo feito pela Strategizze
+Version: 0.4
 Tags: blank, white, empty
 */
 
@@ -34,7 +34,11 @@ body {
   padding: 0;
 }
 
-form, input {
+p {
+  line-height: 1.6;
+}
+
+form, input, textarea {
   font-family: var(--font);
   font-size: 1rem;
 }
@@ -103,8 +107,7 @@ li.menu-item:hover ul.sub-menu {
   display: inline;
 }
 
-ul.sub-menu {
-  
+ul.sub-menu { 
   padding-left: 0;
 }
 
@@ -112,6 +115,23 @@ ul.sub-menu > li {
   padding-left: 0;
   padding: 1rem 0;
   background-color: var(--vermelho);
+}
+.nav_menu_mobile {
+  display: none;
+  transform: scaleY(0);
+  margin: 1rem 2rem;
+  color: var(--gelo);
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.nav_menu_mobile > span {
+  padding: 0.5rem;
+  border: 2px solid var(--gelo);
+}
+
+.nav_menu_mobile .fas {
+  padding: 0 0.5rem;
 }
 
 /* Post */
@@ -144,6 +164,7 @@ ul.sub-menu > li {
   margin-bottom: 1rem;
   color: var(--laranja);
   font-weight: var(--bold);
+  margin-top: 0.25rem;
 }
 
 .post-categories, .post-categories > li {
@@ -158,6 +179,7 @@ ul.sub-menu > li {
 }
 
 .post-categories {
+  display: flex;
   margin-bottom: 1rem;
 }
 .post-categories > li > a {
@@ -213,11 +235,26 @@ ul.sub-menu > li {
   text-align: left;
 }
 
+.comment-form > p {
+  display: flex;
+  flex-direction: column;
+}
+
+p.comment-form-cookies-consent {
+  flex-direction: row;
+}
+
 /* Sidebar */
 
 .sidebar {
   margin-top: 2rem;
   max-width: 15rem;
+  line-height: 1.6;
+}
+
+.sidebar ul {
+  margin-left: 0;
+  padding-left: 0;
 }
 
 .search {
@@ -230,14 +267,19 @@ ul.sub-menu > li {
   margin-bottom: 1rem;
 }
 
-.search_input {
+.widget_title {
+  margin-top: 4rem;
+}
+
+input.email, .search_input, textarea, input[type=text]  {
   padding: 1rem;
+  margin: 1rem 0;
   border: solid 2px var(--verde);
   border-radius: 1rem;
   color: var(--verde);
 }
 
-.search_button {
+input.button, .search_button, input#submit {
   padding: 1rem;
   border-radius: 1rem;
   border: 0;
@@ -245,9 +287,115 @@ ul.sub-menu > li {
   color: var(--gelo);
 }
 
+#mc_embed_signup {
+  background: transparent !important;
+}
+
+/* Footer */
+
 .footer {
   background-color: var(--laranja);
   color: var(--gelo);
   padding: 1rem;
+}
+
+.footer-menu {
+  text-align: left;
+}
+
+.footer .menu {
+  margin-bottom: 1rem;
+  font-weight: var(--xbold);
+}
+
+.footer .sub-menu {
+  display: inline;
+  font-weight: 400;
+}
+
+.footer .sub-menu li {
+  background-color: transparent;
+  padding: 1rem 0 0;
+}
+
+.footer .sub-menu li a {
+  text-transform: initial;
+}
+
+.footer_legal {
   text-align: center;
+}
+
+@media (max-width: 965px) {
+  .sidebar{
+    max-width: 10rem;
+    font-size: 14px;
+  }
+  .post {
+    max-width: 30rem;
+  }
+  .post_img img {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 710px) {
+  .main {
+    flex-direction: column;
+  }
+
+  nav {
+    display: flex;
+    justify-content: right;
+    flex-direction: column;
+  }
+  .nav_menu {
+    display: none;
+    transform: scaleY(0);
+    transition: all .5s;
+  }
+
+  .nav_menu_mobile {
+    display: flex;
+    justify-content: flex-end;
+    transform: scaleY(1);
+  }
+
+  .show {
+    display: inline;
+    flex-direction: column;
+    transform: scaleY(1);
+  }
+  .menu {
+    display: inline;
+  }
+
+  .menu-menu-do-cabecalho-container {
+    display: flex;
+    justify-content: end;
+  }
+
+  .menu-item {
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solic var(--claro);
+  }
+  .post, .sidebar, .post-nav{
+    max-width: 90vw;
+    margin: 0 1.5rem;
+  }
+
+  .footer_menu > div > ul{
+    flex-direction: column;
+  }
+
+  .footer .sub-menu li {
+    padding: 1rem 0 2rem;
+  }
+
+  .footer_legal {
+    margin-top: 2rem;
+  }
+
+  
 }

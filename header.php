@@ -17,7 +17,14 @@
 
 <body>
 <header>
-	<nav><?php wp_nav_menu( array( 'theme-location' => 'header-menu' ) ); ?></nav>
+	<nav>
+		<div class="nav_menu_mobile">
+			 <span><i class="fas fa-bars"></i> Menu</span>
+		</div>
+		<div class="nav_menu">
+			<?php wp_nav_menu( array( 'theme-location' => 'header-menu' ) ); ?>
+		</div>
+</nav>
 	<div class="banner">
 
     <img src="<?php header_image(); ?>" alt="<?php bloginfo('name'); ?>">
