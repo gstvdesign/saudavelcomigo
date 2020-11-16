@@ -1,5 +1,9 @@
 <?php 
 
+$theme = wp_get_theme();
+define('THEME_VERSION', $theme->Version); 
+
+
 // Theme support
 add_theme_support( 'title-tag' );
 add_theme_support( 'post-thumbnails' );
@@ -15,7 +19,7 @@ add_theme_support( 'custom-header', $header_args );
 
 // Styles and scripts
 function strategizze_assets() { 
-  wp_enqueue_style('strategizze', get_template_directory_uri() . '/style.css', false);
+  wp_enqueue_style('strategizze', get_template_directory_uri() . '/style.css', [], THEME_VERSION, false);
   wp_enqueue_script('strategizze', get_template_directory_uri() . '/assets/js/script.js', true);
   wp_enqueue_script('font-awesome', 'https://kit.fontawesome.com/e27b9210b4.js', true );
 }
@@ -57,6 +61,17 @@ function strategizze_sidebar() {
       'after_tile'    => '</h3>'
     )
     );
+    register_sidebar(
+      array(
+        'id'            => 'secondary',
+        'name'          => __('Widget de rodapé'),
+        'description'   => __('Pode jogar coisas aqui'),
+        'before_widget' => '<div id="%1$s" class="widget %2$s">',
+        'after_widget'  => '</div>',
+        'before_title'  => '<h3 class="widget_title">',
+        'after_tile'    => '</h3>'
+      )
+      );
 }
 
 add_action('widgets_init', 'strategizze_sidebar');
